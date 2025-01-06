@@ -8,10 +8,10 @@
 
 - **App.class**  
   포인트홈 SDK초기화를 진행합니다.
-- 
+
 - **MainActivity.class**  
   포인트홈 레이아웃 초기화를 진행합니다.
-- 
+
 - **Additional.class**  
   포인트홈 추가 API 정의입니다.
 
