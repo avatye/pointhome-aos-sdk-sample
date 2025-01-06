@@ -1,0 +1,35 @@
+[versions]
+adCash = "2.1.0.23"
+product = "1.3.1.84"
+agp = "8.5.1"
+kotlin = "1.9.0"
+coreKtx = "1.8.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.6.1"
+material = "1.12.0"
+activity = "1.9.3"
+
+
+[libraries]
+ad-plus-applovin = { module = "com.avatye.cashblock:ad-plus-applovin", version.ref = "adCash" }
+ad-plus-cauly = { module = "com.avatye.cashblock:ad-plus-cauly", version.ref = "adCash" }
+ad-plus-fan = { module = "com.avatye.cashblock:ad-plus-fan", version.ref = "adCash" }
+ad-plus-mezzomedia = { module = "com.avatye.cashblock:ad-plus-mezzomedia", version.ref = "adCash" }
+ad-plus-mobon = { module = "com.avatye.cashblock:ad-plus-mobon", version.ref = "adCash" }
+ad-plus-pangle = { module = "com.avatye.cashblock:ad-plus-pangle", version.ref = "adCash" }
+ad-plus-unity = { module = "com.avatye.cashblock:ad-plus-unity", version.ref = "adCash" }
+ad-plus-vungle = { module = "com.avatye.cashblock:ad-plus-vungle", version.ref = "adCash" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+pointhome = { module = "com.avatye.pointhome:product", version.ref = "product" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+
