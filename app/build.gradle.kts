@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.avatye.pointhome.pointhome.sample"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.avatye.pointhome.pointhome.sample"
-        minSdk = 19
-        targetSdk = 34
+        minSdk = 21
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -41,16 +41,14 @@ dependencies {
     implementation (libs.ad.plus.cauly) // or ("com.avatye.cashblock:ad-plus-cauly:$adCashVersion")
     //Facebook Audience Network
     implementation (libs.ad.plus.fan) // or ("com.avatye.cashblock:ad-plus-fan:$adCashVersion")
-    //MezzoMedia
-    implementation (libs.ad.plus.mezzomedia) // or ("com.avatye.cashblock:ad-plus-mezzomedia:$adCashVersion")
     //Pangle
     implementation (libs.ad.plus.pangle) // or ("com.avatye.cashblock:ad-plus-pangle:$adCashVersion")
     //UnityAds
     implementation (libs.ad.plus.unity) // or ("com.avatye.cashblock:ad-plus-unity:$adCashVersion")
     //Vungle
     implementation (libs.ad.plus.vungle) // or ("com.avatye.cashblock:ad-plus-vungle:$adCashVersion")
-    //Mobon
-    implementation (libs.ad.plus.mobon) // or ("com.avatye.cashblock:ad-plus-mobon:$adCashVersion")
+    //Mobwith
+    implementation (libs.ad.plus.mobwith) // or ("com.avatye.adcash:archive-mobwith:$MediationVersion")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

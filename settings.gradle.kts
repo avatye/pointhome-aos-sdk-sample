@@ -16,18 +16,19 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven(url = "https://jitpack.io")
         maven(url = "https://artifact.bytedance.com/repository/pangle")
         maven(url = "https://devrepo.kakao.com/nexus/content/groups/public/")
-        maven(url = "https://dl.cloudsmith.io/public/avatye/Android-CashBlock/maven/")
         maven(url = "https://dl.cloudsmith.io/public/avatye/Android-PointHome/maven/")
-        maven(url = "https://dl.cloudsmith.io/public/avatye/android-pointhome-internal/maven/")
-
+        maven(url = "https://dl.cloudsmith.io/public/avatye/android-adcash/maven/")
+        maven(url = "https://nexus.wisernd.co.kr/repository/sdk/")
 
         maven {
-            url = uri("s3://repo.cauly.net/releases")
-            credentials(AwsCredentials::class.java) {
-                accessKey = "AKIAWRZUK5MFKYVSUOLB"
-                secretKey = "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"
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/cauly/Android-SDK/SDK")
+            credentials {
+                username = "cauly"
+                password = "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"
             }
         }
     }

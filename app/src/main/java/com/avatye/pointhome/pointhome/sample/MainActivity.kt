@@ -15,7 +15,7 @@ import com.avatye.pointhome.builder.PointHomeSlider
 import com.avatye.pointhome.core.utils.error.PointHomeError
 import com.avatye.pointhome.pointhome.sample.Additional.requestUserInfo
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), DashboardStateListener{
     // 1. 포인트홈 객체 선언
     var pointHomeSlider: PointHomeSlider? = null
 
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // 2. 포인트홈 초기화 진행
+        /*// 2. 포인트홈 초기화 진행
         PointHomeService.pointHomeBuilder(
             this@MainActivity, // 포인트홈을 사용하는 Activity
             userKey = null, // userKey를 설정. 채널링이 아닌 경우 null.
@@ -62,15 +62,28 @@ class MainActivity : AppCompatActivity() {
                 // 포인트홈이 닫힌 경우, 발생 원인 로그 출력
                 Log.d("Close Log Example", "Closed by: " + caller.name)
             }
-        }
+        }*/
 
         findViewById<Button>(R.id.start).setOnClickListener {
-            pointHomeSlider?.dashboardOpen()
+            //pointHomeSlider?.dashboardOpen()
+            PointHomeService.pointHomeActivity(this,"3856201432","roulette",this)
         }
 
         findViewById<Button>(R.id.request).setOnClickListener {
             requestUserInfo()
         }
+
+    }
+
+    override fun dashboardClose(caller: PointHomeSDK.CallResource) {
+
+    }
+
+    override fun dashboardOpen(caller: PointHomeSDK.CallResource) {
+
+    }
+
+    override fun openFail(reason: PointHomeError) {
 
     }
 }
