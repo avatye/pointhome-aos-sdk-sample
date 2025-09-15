@@ -1,21 +1,66 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# Common
+-keepattributes Signature,InnerClasses,EnclosingMethod,RuntimeVisibleAnnotations,*Annotation*
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# Gson
+-keepclassmembers,allowobfuscation class * {
+ @com.google.gson.annotations.SerializedName <fields>;
+}
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# OkHttp
+-dontwarn javax.annotation.**
+-keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
+-dontwarn org.codehaus.mojo.animal_sniffer.*
+-dontwarn okhttp3.internal.platform.ConscryptPlatform
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# Pointhome
+-keeppackagenames com.avatye.pointhome.**
+-keep class com.avatye.pointhome.** { *; }
+
+# Adcash
+-keep class com.avatye.adcash.** { *; }
+
+# IGAWorks
+-keep class com.igaworks.ssp.** { *; }
+-keep class com.igaworks.ssp.R$* # R 클래스와 그 멤버들을 난독화에서 제외
+-dontwarn com.igaworks.ssp.** # IGAWorks 관련 경고 메시지 무시
+-keepclassmembers class com.igaworks.ssp.R$*{ # R 클래스 내의 정적 필드를 난독화에서 제외
+  public static <fields>;
+}
+
+# Unity Ads
+-keep class com.unity3d.ads.** { *; }
+-keep class com.unity3d.services.** { *; }
+
+# Vungle
+-dontwarn com.vungle.warren.downloader.DownloadRequestMediator$Status
+-dontwarn com.vungle.warren.error.VungleError$ErrorCode
+-dontwarn com.google.android.gms.common.GoogleApiAvailabilityLight
+-dontwarn com.google.android.gms.ads.identifier.AdvertisingIdClient
+-dontwarn com.google.android.gms.ads.identifier.AdvertisingIdClient$Info
+-keep class com.moat.** { *; } # MOAT 광고 추적 라이브러리를 난독화에서 제외
+-dontwarn com.moat.** # MOAT 관련 경고 메시지 무시
+
+# Pangle
+-keep class com.bytedance.sdk.** { *; }
+-keep class com.pgl.sys.ces.* { *; }
+
+# Facebook Audience Network(FAN)
+-keep class com.facebook.ads.** { *; }
+
+# Cauly
+-keep class com.fsn.cauly.** {
+	  public *; protected *;
+}
+-keep class com.trid.tridad.** {
+ 	 public *; protected *;
+}
+
+#mezzomedia
+-keep class com.mmc.man.** { *; }
+-keep interface com.mmc.man.** { *; }
+
+# Mobwith
+-dontwarn com.mobwith.adapters.**
+-keep public class com.mobwith.** { *; }
+-keepnames class com.httpmodule.internal.publicsuffix.PublicSuffixDatabase
+-keep public class com.httpmodule.** { public *;}
