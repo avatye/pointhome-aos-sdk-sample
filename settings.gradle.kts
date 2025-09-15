@@ -22,15 +22,7 @@ dependencyResolutionManagement {
         maven(url = "https://dl.cloudsmith.io/public/avatye/Android-PointHome/maven/")
         maven(url = "https://dl.cloudsmith.io/public/avatye/android-adcash/maven/")
         maven(url = "https://nexus.wisernd.co.kr/repository/sdk/")
-
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/cauly/Android-SDK/SDK")
-            credentials {
-                username = "cauly"
-                password = "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"
-            }
-        }
+        maven(url = "https://cauly.github.io/cauly-sdk-android-maven/maven-repo")
     }
 }
 
