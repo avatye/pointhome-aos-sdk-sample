@@ -34,7 +34,7 @@ android {
 
 dependencies {
     //PointHome implementation
-    implementation(libs.pointhome) // or ("com.avatye.pointhome:product:{SDK-VERSION}")
+    implementation (libs.pointhome) // or ("com.avatye.pointhome:product:{SDK-VERSION}")
     //AppLovin
     implementation (libs.ad.plus.applovin) // or ("com.avatye.cashblock:ad-plus-applovin:$adCashVersion")
     //Cauly

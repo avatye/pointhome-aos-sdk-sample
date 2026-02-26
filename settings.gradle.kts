@@ -21,7 +21,6 @@ dependencyResolutionManagement {
         maven(url = "https://devrepo.kakao.com/nexus/content/groups/public/")
         maven(url = "https://dl.cloudsmith.io/public/avatye/Android-PointHome/maven/")
         maven(url = "https://dl.cloudsmith.io/public/avatye/android-adcash/maven/")
-        maven(url = "https://nexus.wisernd.co.kr/repository/sdk/")
         maven(url = "https://cauly.github.io/cauly-sdk-android-maven/maven-repo")
     }
 }

@@ -15,8 +15,8 @@ class App : Application() {
         // 포인트홈 초기화를 시작합니다.
         PointHomeSDK.initializer(
             application = this,
-            appID = "a376439db2a640058f45c538e307TEST",
-            appSecret = "668da0e0c4244ea1"
+            appID = "5c57c5073a5346e89d59770c23d3c846",
+            appSecret = "b9873d6f30b24e5c"
         ).apply {
             //로그 설정
             setLogTrace(use = true)

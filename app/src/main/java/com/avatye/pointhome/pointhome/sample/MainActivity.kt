@@ -16,18 +16,24 @@ import com.avatye.pointhome.builder.PointHomeSlider
 import com.avatye.pointhome.core.utils.error.PointHomeError
 import com.avatye.pointhome.pointhome.sample.Additional.requestUserInfo
 
-class MainActivity : AppCompatActivity(), DashboardStateListener{
+class MainActivity : AppCompatActivity(), DashboardStateListener {
     // 1. 포인트홈 객체 선언
-    var pointHomeSlider: PointHomeSlider? = null
+    var pointHomeBuilder: PointHomeActivityBuilder? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.start).setOnClickListener {
-            PointHomeActivityBuilder.with(this@MainActivity)
+            pointHomeBuilder = PointHomeActivityBuilder.with(this@MainActivity)
                 .listener(this@MainActivity)
-                .start()
+
+            pointHomeBuilder?.start()
+
+            // 또는 플로팅 버튼 생성
+            /*pointHomeBuilder?.showAsFloatingButton {
+
+            }*/
         }
 
         findViewById<Button>(R.id.request).setOnClickListener {
